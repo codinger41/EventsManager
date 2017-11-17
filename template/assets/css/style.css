@@ -197,9 +197,13 @@ textarea {
 }
 
 body{
-    background-image: url(".../assets/img/jumbotron.jpg")
+    background-image: url("jumbotron.jpg")
 }
 
 .pink{
     background: #ff3366;
+}
+.pink-text{
+     background: #ff3366;
+     color:white
 }

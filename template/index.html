@@ -9,24 +9,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Compiled and minified JavaScript -->
-    <script src="assets/js/materialize.min.js"></script>
-
+    
     <title>EventsManager</title>
 </head>
 <header>
        
 <!-- Dropdown Structure -->
 
-<nav>
-  <div class="nav-wrapper pink">
-    <a href="#" class="brand-logo"><img src="assets/img/logo.png"></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="upcoming-events.html">Upcoming Events</a></li>
-      <li><a href="all-centers.html">Centers</a></li>
-      <!-- Dropdown Trigger -->
-    </ul>
-  </div>
-</nav>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">
+        <img src="assets/img/logo.png">
+      </a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="index.html">Sign-up/Sign in</a>
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li>
+          <a href="index.html">Sign-up/Sign in</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>
 <body>
   <div class="form col-lg-12">
@@ -40,7 +49,7 @@
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
-          
+
           <form action="/" method="post">
           
           <div class="top-row">
@@ -117,8 +126,12 @@
 <footer class="page-footer pink">
   <div class="footer-copyright">
     <div class="container">
-     <h1 style="text-align:center" > © 2017 Copyright EventsManager</h1>
+     <p style="text-align:center" > © 2017 Copyright EventsManager</p>
     </div>
   </div>
 </footer>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="assets/js/materialize.min.js"></script>
+<script src="assets/js/init.js"></script>
 </html>

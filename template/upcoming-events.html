@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="assets/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="assets/js/materialize.min.js"></script>
-
     <title>Upcoming Events | EventsManager</title>
 </head>
 <header>
@@ -19,18 +16,26 @@
     <!-- Dropdown Structure -->
 
     <nav>
-        <div class="nav-wrapper pink">
-            <a href="#" class="brand-logo">
-                <img src="assets/img/logo.png">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><img src="assets/img/logo.png"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
                 <li>
-                    <a href="index.html">Sign up/ Sign in</a>
+                    <a href="All-centers.html">All Centers</a>
                 </li>
                 <li>
-                    <a href="all-centers.html">Centers</a>
+                    <a href="My-events.html">My Events</a>
                 </li>
-                <!-- Dropdown Trigger -->
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li>
+                    <a href="All-centers.html">All Centers</a>
+                </li>
+                <li>
+                    <a href="My-events.html">My Events</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -215,4 +220,8 @@
             <h1 style="text-align:center"> © 2017 Copyright EventsManager</h1>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/init.js"></script>
 </footer>

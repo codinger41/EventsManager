@@ -33,3 +33,6 @@
 <img src="template/assets/img/screenshot3.png">
 <img src="template/assets/img/screenshot4.png">
 <img src="template/assets/img/screenshot5.png">
+
+# Demo
+view a demo of this template here ; <a href="https//leksyib.github.io/EventsManager/Template">DEMO!</a>

@@ -35,4 +35,4 @@
 <img src="template/assets/img/screenshot5.png">
 
 # Demo
-view a demo of this template here ; <a href="https//leksyib.github.io/EventsManager/Template">DEMO!</a>
+view a demo of this template here ; <a href="https://leksyib.github.io/EventsManager/Template">DEMO!</a>

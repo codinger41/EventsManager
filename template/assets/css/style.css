@@ -201,6 +201,7 @@ textarea {
     background: #ff3366;
 }
 .pink-text{
-     background: #ff3366;
-     color:white
+    background-color: white;
+    color: #ff3366;
+    font-size: 300%
 }

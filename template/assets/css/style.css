@@ -200,8 +200,10 @@ textarea {
 .pink{
     background: #ff3366;
 }
-.pink-text{
+.pink-text {
     background-color: white;
     color: #ff3366;
-    font-size: 300%
+    font-size: 300%;
+    margin-left: 10%;
+    margin-right: 10%;
 }

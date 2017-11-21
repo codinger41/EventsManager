@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: rgb(186, 188, 193);
+    background: rgb(236, 236, 236);
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -206,4 +206,7 @@ textarea {
     font-size: 300%;
     margin-left: 10%;
     margin-right: 10%;
+}
+.nav-wrapper{
+    background: #ff3366;
 }

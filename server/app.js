@@ -1,27 +1,26 @@
-import express from "express";
-import bodyParser from "body-parser";
-import apiRouter from "./routes/api";
-
-dotenv.config();
+// import requied libraries to setup the server
+import express from 'express';
+import bodyParser from 'body-parser';
+import apiRouter from './routes/api';
 
 const app = express();
 
-// secret for json web token
-app.set("secret_key", process.env.SECRET_KEY);
 
 // for parsing request body content
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// more recipe api routes
-app.use("/api", apiRouter);
+app.get('/', (req, res) => {
+  console.log('eventsmanager!')
+});
+// eventsmanager api routes
+app.use('/api', apiRouter);
 
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "Welcome to EventsManager" });
+// don't go to a page that does not exist, user.
+app.get('*', (req, res) => {
+  res.status(404).send('404: Not Found');
 });
-app.all("*", (req, res) => {
-  res.status(404).send("404: Not Found");
-});
+
 
 // server initialization
 const port = process.env.PORT || 3000;

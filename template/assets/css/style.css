@@ -12,7 +12,7 @@ html {
     color: red
 }
 body {
-    background: rgb(255, 255, 255);
+    background: url('jumbotron.jpg');
     font-family: 'Titillium Web', sans-serif;
 }
 

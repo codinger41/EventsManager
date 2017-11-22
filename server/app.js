@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  console.log('eventsmanager!')
+  console.log('eventsmanager!');
 });
 // eventsmanager api routes
 app.use('/api', apiRouter);
@@ -23,7 +23,7 @@ app.get('*', (req, res) => {
 
 
 // server initialization
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server running. listening on port:  ${port}`);
 });

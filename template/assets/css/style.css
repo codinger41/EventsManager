@@ -8,6 +8,9 @@ html {
     overflow-y: scroll;
 }
 
+.red {
+    color: red
+}
 body {
     background: rgb(255, 255, 255);
     font-family: 'Titillium Web', sans-serif;

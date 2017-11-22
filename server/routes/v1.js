@@ -1,19 +1,16 @@
 import express from 'express';
-import eventController from '../controllers/eventController';
+
+import * as Events from '../controllers/eventController';
+
+const event = new Events.default();
+
 const apiV1 = express.Router();
 
 
 // API routes for GETing and POSTing events
 apiV1
-  .get('/events', eventController.getAllEvents)
-  .post('/events', eventController.createEvent)
-
-
-// API end point for updating and deleting a single event
- apiV1
-   .put('/events/:id', eventController.updateEvent)
-   .get('/events/:id', eventController.getEventById);
-  //.delete('/events/:id', eventController.deleteevent)
+  .get('/events', event.getAllEvents)
+  .post('/events', event.createEvent);
 
 
 export default apiV1;

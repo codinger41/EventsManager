@@ -1,59 +1,67 @@
-import express from 'express';
-import { events } from '../models/eventsData'
-
-exports.getAllEvents = (req, res) => {
+import eventsdb from '../models/eventsData';
+/**
+ *
+ *
+ * @class Recipe
+ */
+export default class Events {
+  // get all events (api/vi/events)
+  /**
+   *
+   *
+   * @param {any} req
+   * @param {any} res
+   * @returns {json}gets all events
+   * @memberof events
+   */
+  getAllEvents(req, res) {
     res.json({
-        event1: events[0],
-        event2: events[1],
-        event3: events[2]
+      events: eventsdb,
+      status: 'success'
     });
-};
-
-exports.createEvent = (req, res) => {
-    if(!req.body.name){
-        return res.json({
-            message: 'Event Naame missing',
-            error: true
-        });
-    }
-    events.push(req.body)
-        return res.json({
-            message: 'Success',
-            error: false
-        })
-};
-
-exports.updateEvent = (req, res) => {
-     for(let i = 0; i < events.length; i++){
-         if(events[i].id === parseInt(req.params.id, 10)){
-            events[i].name = req.body.name;
-            events[i].date = req.body.date;
-            events[i].description = req.body.description;
-             return res.json({
-                message: "success",
-                error: false
-            });
-         }
-        
-     };
-     res.status(404).json({
-        message: 'Error! event not found',
-        error: false
-     });
-};
-
-exports.getEventById = (req, res) => {
-  for (let i = 0; i < events.length; i++) {
-    if (events[i].id === parseInt(req.params.id, 10)) {
-      return res.json({
-        event1: events[i],
-        message: "success",
-        error: false
-      });
-    }
   }
-  res.status(404).json({
-    message: "Error! event not found",
-    error: false
- });
-};
+
+  // add new event
+  /**
+   *
+   *
+   * @param {any} req
+   * @param {any} res
+   * @returns {json} adds a recipe
+   * @memberof Recipe
+   */
+  createEvent(req, res) {
+    if (!req.body.name) {
+      return res.json({ message: 'Event Name missing', error: true });
+    }
+    eventsdb.push(req.body);
+    return res.json({ message: 'Success', error: false });
+  }
+
+  // edit or modify event
+  /**
+   *
+   *
+   * @param {any} req
+   * @param {any} res
+   * @returns {json} adds a recipe
+   * @memberof Recipe
+   */
+}
+// Get event by id (/api/v1/events:eventid)
+/* getEventById(req, res) {
+  eventsdb.forEach((ev) => {
+        if (eventsdb[i].id === parseInt(req.params.id, 10)) {
+          return res.json({
+            event1: eventsdb[i],
+            message: 'success',
+            error: false
+          });
+        }
+      },
+      res
+        .status(404)
+        .json({message: 'Error! event not found', error: false})
+    },
+
+  */

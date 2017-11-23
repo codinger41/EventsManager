@@ -2,3 +2,4 @@ template/.vscode
 server/.vscode
 .vscode
 node_modules
+package-lock.json

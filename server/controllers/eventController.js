@@ -31,9 +31,9 @@ export default class Events {
    * @memberof Events
    */
   createEvent(req, res) {
-    if (!req.body.name) {
+    if (!req.body.name && !req.body.description && !req.body.date) {
       return res.json({
-        message: 'Event Name missing',
+        message: 'Please fill inn all required fields',
         error: true
       });
     }

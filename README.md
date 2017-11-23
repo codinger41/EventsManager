@@ -16,7 +16,7 @@ Npm install
 ```
 Run to start server:
 ```
-npm starts
+npm start
 ```
 Possible API routes
 <ol>

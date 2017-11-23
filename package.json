@@ -32,7 +32,7 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
-    "test": "mocha server/tests/app.test.js --require babel-register",
+    "test": "mocha server/tests/app.test.js --exit --require babel-register --reporter spec",
     "start": "babel-watch app.js"
   },
   "author": "",

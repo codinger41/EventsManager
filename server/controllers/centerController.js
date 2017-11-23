@@ -16,7 +16,7 @@ export default class Centers {
    * @memberof centers
    */
   getAllCenters(req, res) {
-    res.json({
+    res.status(200).json({
       centers: centerdb,
       status: 'success'
     });
@@ -55,7 +55,7 @@ export default class Centers {
   getCenterById(req, res) {
     for (let i = 0; i < centerdb.length; i++) {
       if (centerdb[i].id === parseInt(req.params.centerId, 10)) {
-        return res.json({
+        return res.status(200).json({
           center: centerdb[i],
           message: 'success',
           error: false

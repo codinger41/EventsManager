@@ -38,7 +38,7 @@ export default class Centers {
    * @memberof centers
    */
   addACenter(req, res) {
-    if (!req.body.name || !req.body.facilities || !req.body.location || typeof req.body.name !== 'string' || typeof req.body.location !== 'string' || typeof req.body.facilities !== 'string') {
+    if (!req.body.name || !req.body.facilities || !req.body.location || typeof req.body.name !== 'string' || typeof req.body.location !== 'string') {
       return res.status(400).json({
         message: 'Center not added, fill in required fields',
         error: true

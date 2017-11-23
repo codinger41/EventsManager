@@ -32,7 +32,7 @@ describe('Events API Test', () => {
           id: 9,
           name: 'GDG Lagos',
           description: 'yam festival',
-          date: '20-3-2015'
+          date: 20 - 3 - 2015
         })
         .end((err, res) => {
           expect(res)

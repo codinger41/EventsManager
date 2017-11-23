@@ -1,5 +1,12 @@
 import centerdb from '../models/centerData';
 
+import validator from 'validator';
+
+import isEmpty from 'validator/lib/isEmpty';
+
+import isAlpha from 'validator/lib/isAlpha';
+
+
 /**
  *
  *
@@ -31,9 +38,9 @@ export default class Centers {
    * @memberof centers
    */
   addACenter(req, res) {
-    if (!req.body.name) {
+    if (!req.body.name || !req.body.facilities || !req.body.location || typeof req.body.name !== 'string' || typeof req.body.location !== 'string' || typeof req.body.facilities !== 'string') {
       return res.json({
-        message: 'Center Name missing',
+        message: 'Center not added, fill in required fields',
         error: true
       });
     }

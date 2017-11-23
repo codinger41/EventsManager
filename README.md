@@ -19,9 +19,10 @@ Run to start server:
 npm starts
 ```
 Possible API routes
-POST to /api/v1/events,
-GET from /api/v1/events.
-
-PUT from /api/v1/events/:eventId
-DELETE from /api/v1/events/:eventId
-GET from /api/v1/events/:eventId
+<ol>
+    <li>POST to /api/v1/events</li>
+    <li>GET from /api/v1/events.</li>
+    <li>PUT from /api/v1/events/:eventId</li>
+    <li>DELETE from /api/v1/events/:eventId</li>
+    <li>GET from /api/v1/events/:eventId</li>
+</ol>

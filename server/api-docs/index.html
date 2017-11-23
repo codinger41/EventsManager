@@ -1,0 +1,193 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>EVENTS MANAGER API</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script src="js/lib/energize.js"></script>
+<script src="js/lib/imagesloaded.min.js"></script>
+<script src="js/lib/jquery_ui.js"></script>
+<script src="js/lib/jquery.highlight.js"></script>
+<script src="js/lib/jquery.tocify.js"></script>
+<script src="js/lib/lunr.js"></script>
+    <script src="js/script.js"></script>
+
+    
+      <script>
+        $(function() {
+            setupLanguages(["bash","Nodejs"]);
+        });
+      </script>
+    
+  </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png">
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png">
+      
+        <div class="lang-selector">
+          
+              <a href="#" data-language-name="bash">bash</a>
+          
+              <a href="#" data-language-name="Nodejs">Nodejs</a>
+          
+        </div>
+      
+      
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      
+      <div id="toc">
+      </div>
+      
+        <ul class="toc-footer">
+          
+              <li><a href="#">Sign Up for a Developer Key</a></li>
+          
+              <li><a href="http://github.com/mpociot/whiteboard">Documentation Powered by Whiteboard</a></li>
+          
+        </ul>
+      
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Welcome to the EventsManager API! This API was built with NodeJs for Users of the Events Manager App to be able to Create Events, Modify their Events, Delete their Events and Aministrators should be able to create event centers, Delete Center and Modify Centers</p>
+<h1 id="Authentication"><a href="#Authentication" class="headerlink" title="Authentication"></a>Authentication</h1><p>Authentication has not been implemented</p>
+<h1 id="EventsManager-Centers-and-Events-API"><a href="#EventsManager-Centers-and-Events-API" class="headerlink" title="EventsManager Centers and Events API"></a>EventsManager Centers and Events API</h1><h2 id="Get-All-Centers"><a href="#Get-All-Centers" class="headerlink" title="Get All Centers"></a>Get All Centers</h2><pre><code class="highlight plain"><span class="line">GET http://localhost:4000/api/v1/centers</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    id: 1,</span><br><span class="line">    name: 'Python Hall',</span><br><span class="line">    location: 'Lagos',</span><br><span class="line">    facilities: ['Air conditioners', 'Projectors']</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    id: 2,</span><br><span class="line">    name: 'Python Hall',</span><br><span class="line">    location: 'Lagos',</span><br><span class="line">    facilities: ['Air conditioners', 'Generators']</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    id: 3,</span><br><span class="line">    name: 'Python Hall',</span><br><span class="line">    location: 'Lagos',</span><br><span class="line">    facilities: ['Air conditioners', 'Projectors', 'Generators']</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    id: 4,</span><br><span class="line">    name: 'Python Hall',</span><br><span class="line">    location: 'Lagos',</span><br><span class="line">    facilities: ['Projectors', 'Generators']</span><br><span class="line">  &#125;</span><br><span class="line">];</span><br></code></pre>
+<p>This endpoint retrieves all Centers</p>
+<h3 id="HTTP-Request"><a href="#HTTP-Request" class="headerlink" title="HTTP Request"></a>HTTP Request</h3><p><code>GET http://localhost:4000/api/v1/centers</code></p>
+<aside class="success"><br>RETURNS STATUS CODE 200<br></aside>
+
+<h2 id="Get-a-Specific-Center"><a href="#Get-a-Specific-Center" class="headerlink" title="Get a Specific Center"></a>Get a Specific Center</h2><pre><code class="highlight plain"><span class="line">http://localhost:4000/api/v1/centers/&lt;centerId&gt;</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">&#123;</span><br><span class="line">    id: 4,</span><br><span class="line">    name: 'Python Hall',</span><br><span class="line">    location: 'Lagos',</span><br><span class="line">    facilities: ['Projectors', 'Generators']</span><br><span class="line">  &#125;</span><br></code></pre>
+<p>This endpoint retrieves a specific Center</p>
+<h2 id="Edit-a-Specific-Center"><a href="#Edit-a-Specific-Center" class="headerlink" title="Edit a Specific Center"></a>Edit a Specific Center</h2><pre><code class="highlight plain"><span class="line">PUT http://localhost:4000/api/v1/centers/&lt;centerId&gt;</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">&#123;</span><br><span class="line">    id: 4,</span><br><span class="line">    name: 'Python Hall',</span><br><span class="line">    location: 'Lagos',</span><br><span class="line">    facilities: ['Projectors', 'Generators']</span><br><span class="line">  &#125;</span><br></code></pre>
+<p>This endpoint Edits a specific Center</p>
+<aside class="warning">It will return errors for a center of that ID does not exist.</aside>
+
+
+<p><code>DELETE http://localhost:4000/api/v1/centers/&lt;centerId&gt;</code></p>
+<h2 id="Edit-a-Specific-Center-1"><a href="#Edit-a-Specific-Center-1" class="headerlink" title="Edit a Specific Center"></a>Edit a Specific Center</h2><pre><code class="highlight plain"><span class="line">DELETE http://localhost:4000/api/v1/centers/&lt;centerId&gt;</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">&#123;</span><br><span class="line">    message: 'success',</span><br><span class="line">    error: false</span><br><span class="line">  &#125;</span><br></code></pre>
+<p>This endpoint Deletes a specific Center</p>
+<aside class="warning">It will return errors for a center of that ID does not exist.</aside>
+
+
+<p><code>DELETE http://localhost:4000/api/v1/centers/&lt;centerId&gt;</code></p>
+<h2 id="Get-All-Events"><a href="#Get-All-Events" class="headerlink" title="Get All Events"></a>Get All Events</h2><pre><code class="highlight plain"><span class="line">GET http://localhost:4000/api/v1/Events</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    id: 1,</span><br><span class="line">    name: 'GDG DEVFEST',</span><br><span class="line">    description: 'Traning worldclass developers',</span><br><span class="line">    date: 10 - 23 - 2017</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    id: 2,</span><br><span class="line">    name: 'Python Conference',</span><br><span class="line">    description: 'Traning worldclass developers',</span><br><span class="line">    date: 10 - 23 - 2017</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    id: 3,</span><br><span class="line">    name: 'Forloop Abuja',</span><br><span class="line">    description: 'Traning worldclass developers',</span><br><span class="line">    date: 10 - 23 - 2017</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br></code></pre>
+<p>This endpoint retrieves all Events</p>
+<h3 id="HTTP-Request-1"><a href="#HTTP-Request-1" class="headerlink" title="HTTP Request"></a>HTTP Request</h3><p><code>GET http://localhost:4000/api/v1/events</code></p>
+<aside class="success"><br>RETURNS STATUS CODE 200<br></aside>
+
+<h2 id="Get-a-Specific-Event"><a href="#Get-a-Specific-Event" class="headerlink" title="Get a Specific Event"></a>Get a Specific Event</h2><pre><code class="highlight plain"><span class="line">http://localhost:4000/api/v1/events/&lt;eventId&gt;</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">&#123;</span><br><span class="line">    id: 3,</span><br><span class="line">    name: 'Forloop Abuja',</span><br><span class="line">    description: 'Traning worldclass developers',</span><br><span class="line">    date: 10 - 23 - 2017</span><br><span class="line">  &#125;</span><br></code></pre>
+<p>This endpoint retrieves a specific Event</p>
+<aside class="warning">It will return errors for an event of that ID does not exist.</aside>
+
+<h3 id="HTTP-Request-2"><a href="#HTTP-Request-2" class="headerlink" title="HTTP Request"></a>HTTP Request</h3><p><code>GET http://localhost:4000/api/v1/events/&lt;eventId&gt;</code></p>
+<h2 id="Edit-a-Specific-event"><a href="#Edit-a-Specific-event" class="headerlink" title="Edit a Specific event"></a>Edit a Specific event</h2><pre><code class="highlight plain"><span class="line">PUT http://localhost:4000/api/v1/events/&lt;eventId&gt;</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">&#123;</span><br><span class="line">    id: 4,</span><br><span class="line">    name: 'Python Hall',</span><br><span class="line">    location: 'Lagos',</span><br><span class="line">    facilities: ['Projectors', 'Generators']</span><br><span class="line">  &#125;</span><br></code></pre>
+<p>This endpoint Edits a specific event</p>
+<aside class="warning">It will return errors for an event of that ID does not exist.</aside>
+
+
+<p><code>DELETE http://localhost:4000/api/v1/events/&lt;eventId&gt;</code></p>
+<h2 id="Edit-a-Specific-event-1"><a href="#Edit-a-Specific-event-1" class="headerlink" title="Edit a Specific event"></a>Edit a Specific event</h2><pre><code class="highlight plain"><span class="line">DELETE http://localhost:4000/api/v1/events/&lt;eventId&gt;</span><br></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight"><span class="line">&#123;</span><br><span class="line">    message: 'success',</span><br><span class="line">    error: false</span><br><span class="line">  &#125;</span><br></code></pre>
+<p>This endpoint Deletes a specific event</p>
+<aside class="warning">It will return errors for an event of that ID does not exist.</aside>
+
+
+<p><code>DELETE http://localhost:4000/api/v1/events/&lt;eventId&gt;</code></p>
+
+        
+          
+              <h1 id="Errors"><a href="#Errors" class="headerlink" title="Errors"></a>Errors</h1><p>The EVENTSMANAGER API uses the following error codes:</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request – Your request sucks</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found – The specified kitten could not be found</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error – We had a problem with our server. Try again later.</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      </div>
+      <div class="dark-box">
+        
+          <div class="lang-selector">
+            
+                <a href="#" data-language-name="bash">bash</a>
+            
+                <a href="#" data-language-name="Nodejs">Nodejs</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

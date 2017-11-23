@@ -8,6 +8,10 @@ const event = new Events.default();
 const center = new Centers.default();
 const apiRoutes = express.Router();
 
+// API Route for the API DOCS
+apiRoutes.get('/api-docs', (req, res) => {
+  res.render('../api-docs/index.html');
+});
 
 // API routes for GETing and POSTing events
 apiRoutes.get('/events', event.getAllEvents);

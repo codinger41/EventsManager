@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/leksyib/EventsManager.svg?branch=ft-api-test-mocha)](https://travis-ci.org/leksyib/EventsManager)
 # EVENTSMANAGER
 EventsManager is a FullStack JavaSript Web App built for Management and organisation of events and event centers.
 

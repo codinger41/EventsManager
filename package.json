@@ -42,7 +42,10 @@
     "test": "mocha server/tests/app.test.js --exit --require babel-register --reporter spec",
     "start": "babel-watch app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "coveralls": "nyc npm test&& nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
+    "build": "babel server -d server/dist --ignore server/dist",
+    "postinstall": "npm run build",
+    "start:dev": "babel-watch --watch server/ --exec babel-node  -- app.js"
   },
   "author": "",
   "license": "ISC"

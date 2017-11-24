@@ -2,3 +2,4 @@ template/.vscode
 server/.vscode
 .nyc_output
 node_modules
+.vscode

@@ -8,8 +8,11 @@ html {
     overflow-y: scroll;
 }
 
+.red {
+    color: red
+}
 body {
-    background: rgb(236, 236, 236);
+    background: url('jumbotron.jpg');
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -27,7 +30,16 @@ a:hover {
 .form {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
-    max-width: 900px;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.form-signup{
+    background: rgba(19, 35, 47, 0.9);
+    padding: 40px;
+    max-width: 600px;
     margin: 40px auto;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
@@ -197,16 +209,16 @@ textarea {
 }
 
 
-.pink{
+.pink {
     background: #ff3366;
 }
-.pink-text{
+.pink-text {
     background-color: white;
     color: #ff3366;
     font-size: 300%;
     margin-left: 10%;
     margin-right: 10%;
 }
-.nav-wrapper{
+.nav-wrapper {
     background: #ff3366;
 }

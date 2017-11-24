@@ -8,8 +8,11 @@ html {
     overflow-y: scroll;
 }
 
+.red {
+    color: red
+}
 body {
-    background: rgb(255, 255, 255);
+    background: url('jumbotron.jpg');
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -213,8 +216,6 @@ textarea {
     background-color: white;
     color: #ff3366;
     font-size: 300%;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 .nav-wrapper {
     background: #ff3366;

@@ -1,12 +1,4 @@
 import centerdb from '../models/centerData';
-
-import validator from 'validator';
-
-import isEmpty from 'validator/lib/isEmpty';
-
-import isAlpha from 'validator/lib/isAlpha';
-
-
 /**
  *
  *

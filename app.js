@@ -7,7 +7,7 @@ import apiRouter from './server/routes/api';
 const app = express();
 
 
-// for parsing request body content
+// to parse req body content
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

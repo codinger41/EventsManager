@@ -31,7 +31,7 @@ export default class Events {
    * @memberof Events
    */
   createEvent(req, res) {
-    if (!req.body.name || !req.body.description || !req.body.date || typeof req.body.name !== 'string' || typeof req.body.description !== 'string' || typeof req.body.date !== 'number') {
+    if (!req.body.name || !req.body.description || !req.body.date) {
       return res.status(400).json({
         message: 'Please fill in all required fields',
         error: true

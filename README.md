@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/leksyib/EventsManager.svg?branch=ft-api-test-mocha)](https://travis-ci.org/leksyib/EventsManager)
-[![Coverage Status](https://coveralls.io/repos/github/leksyib/EventsManager/badge.svg?branch=develop)](https://coveralls.io/github/leksyib/EventsManager?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/leksyib/EventsManager/badge.svg?branch=Final-UI-and-API-endpoint-changes)](https://coveralls.io/github/leksyib/EventsManager?branch=Final-UI-and-API-endpoint-changes)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/91a04d9e02993baac251/test_coverage)](https://codeclimate.com/github/leksyib/EventsManager/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/91a04d9e02993baac251/maintainability)](https://codeclimate.com/github/leksyib/EventsManager/maintainability)
 # EVENTSMANAGER

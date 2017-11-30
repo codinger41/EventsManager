@@ -1,20 +1,14 @@
-
-
 module.exports = (sequelize, DataTypes) => {
   const Centers = sequelize.define('Centers', {
     name: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    description: {
+    location: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    Center: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    direction: {
+    facilities: {
       type: DataTypes.TEXT,
       allowNull: false,
     }

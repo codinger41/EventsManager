@@ -1,10 +1,22 @@
-'use strict';
+
+
 module.exports = (sequelize, DataTypes) => {
-  var Events = sequelize.define('Events', {
-    title: DataTypes.STRING
+  const Events = sequelize.define('Events', {
+    name: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    location: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    facilities: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    }
   }, {
     classMethods: {
-      associate: function(models) {
+      associate(models) {
         // associations can be defined here
       }
     }

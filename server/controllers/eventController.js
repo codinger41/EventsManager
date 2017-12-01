@@ -1,5 +1,3 @@
-import validator from 'validator';
-
 import eventsdb from '../models/eventsData';
 /**
  *
@@ -33,9 +31,9 @@ export default class Events {
    * @memberof Events
    */
   createEvent(req, res) {
-    if (validator.isAlpha(req.body.name) === false) {
+    if (!req.body.name || !req.body.description || !req.body.date) {
       return res.status(400).json({
-        message: 'Event Name should contain letters and numbers only',
+        message: 'Please do fill in the required fields',
         error: true
       });
     }

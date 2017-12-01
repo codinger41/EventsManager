@@ -1,4 +1,4 @@
-import validator from 'validator';
+
 import centerdb from '../models/centerData';
 
 /**
@@ -32,9 +32,9 @@ export default class Centers {
    * @memberof centers
    */
   addACenter(req, res) {
-    if (validator.isAlphanumeric(req.body.name) === false) {
+    if (!req.body.name || !req.body.location) {
       return res.status(400).json({
-        message: 'Center name should be Alphabetic only',
+        message: 'Please do fill in the required fields',
         error: true
       });
     }

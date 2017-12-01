@@ -57,10 +57,48 @@ describe('Events API Test', () => {
         });
     });
   });
+  describe('POST event without name', () => {
+    it('should return 400 for bad request', (done) => {
+      chai
+        .request(app)
+        .post('/api/v1/events')
+        .send({
+          id: 9,
+          name: '',
+          description: 'yam festival',
+          date: 20 - 3 - 2015
+        })
+        .end((err, res) => {
+          expect(res)
+            .to
+            .have.status(400);
+          done();
+        });
+    });
+  });
+  describe('POST event without description', () => {
+    it('should return 400 for bad request', (done) => {
+      chai
+        .request(app)
+        .post('/api/v1/events')
+        .send({
+          id: 9,
+          name: 'GDG DEVS',
+          description: '',
+          date: 20 - 3 - 2015
+        })
+        .end((err, res) => {
+          expect(res)
+            .to
+            .have.status(400);
+          done();
+        });
+    });
+  });
 });
 
 
-describe('Events API Test', () => {
+describe('Centers API Test', () => {
   describe('GET /', () => {
     // Test for undefined routes
     it(' should Return 404 for unexistent route', (done) => {
@@ -106,6 +144,46 @@ describe('Events API Test', () => {
             .to
             .have
             .status(200);
+          done();
+        });
+    });
+  });
+  describe('POST center without name', () => {
+    it('should return 400 for bad request', (done) => {
+      chai
+        .request(app)
+        .post('/api/v1/centers')
+        .send({
+          id: 9,
+          name: '',
+          location: 'Lagos',
+          facilities: 'Projectors, Electricity'
+        })
+        .end((err, res) => {
+          expect(res)
+            .to
+            .have
+            .status(400);
+          done();
+        });
+    });
+  });
+  describe('POST center without Location', () => {
+    it('should return 400 for bad request', (done) => {
+      chai
+        .request(app)
+        .post('/api/v1/centers')
+        .send({
+          id: 9,
+          name: 'Ruby hall',
+          location: '',
+          facilities: 'Projectors, Electricity'
+        })
+        .end((err, res) => {
+          expect(res)
+            .to
+            .have
+            .status(400);
           done();
         });
     });
